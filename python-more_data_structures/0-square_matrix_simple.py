@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
 
-import math
 def square_matrix_simple(matrix=[]):
     sqrt = []
     for i in matrix:
