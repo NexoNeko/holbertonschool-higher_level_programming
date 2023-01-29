@@ -2,4 +2,4 @@
 
 
 def raise_exception():
-    raise Exception("")
+    raise Exception("Exception has been raised")
