@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-
+"""Defines the class square """
 class Square:
     #this initializes the square
     """ a square with defined size """
