@@ -9,11 +9,8 @@ class Square:
         self.__size = size
         posx = position
         for i in posx:
-            if type(i) is not int\
-            or i < 0\
-            or len(i) != 2:
-                raise TypeError\
-                ("position must be a tuple of 2 positive integers")
+            if type(i) is not int or i < 0:
+                raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = position
 
     @property
