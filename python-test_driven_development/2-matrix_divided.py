@@ -11,7 +11,7 @@ def matrix_divided(matrix, div):
     div = int(div)
     if div == 0:
         raise ZeroDivisionError("division by zero")
-    
+
     for i in range(len(matrix)):
         for j in range(len(matrix[i])):
             # j type error
@@ -22,9 +22,11 @@ def matrix_divided(matrix, div):
     matrix_new = []
     for i in matrix:
         if len(i) != len(matrix[0]):
-            raise TypeError("Each row of the matrix must have the same size")
+            raise TypeError\
+                ("Each row of the matrix must have the same size")
         try:
             matrix_new.append(list(map(lambda x: round(x / div, 2), i)))
         except TypeError:
-            raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+            raise TypeError\
+                ("matrix must be a matrix (list of lists) of integers/floats")
     return matrix_new
