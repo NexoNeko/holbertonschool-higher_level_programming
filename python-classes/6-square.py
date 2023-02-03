@@ -7,6 +7,10 @@ class Square:
     def __init__(self, size=0, position=(0, 0)):
         """ Initializes the square """
         self.__size = size
+        posx = position
+        for i in posx:
+            if type(i) is not int or i < 0:
+                raise TypeError("size must be an integer")
         self.__position = position
 
     @property
