@@ -29,4 +29,5 @@ def text_indentation(text):
         else:
             la.append(i)
 
-    print("".join(la))
+    x = "".join(la)
+    print(x, end="", flush=True)
