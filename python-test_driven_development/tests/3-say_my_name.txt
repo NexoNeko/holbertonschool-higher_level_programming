@@ -19,7 +19,7 @@ Traceback (most recent call last):
 ...
 NameError: name 'NaN' is not defined
 
->>>say_my_name()
+>>> say_my_name()
 Traceback (most recent call last):
 ...
 NameError: name 'ay_my_name' is not defined. Did you mean: 'say_my_name'?
