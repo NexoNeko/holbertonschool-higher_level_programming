@@ -1,0 +1,48 @@
+==========================
+Tests for ``4-print_square.py``
+==========================
+
+--------------------------
+
+>>> print_square = __import__('4-print_square').print_square
+
+> print_square(4)
+####
+####
+####
+####
+
+> print_square()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: print_square() missing 1 required positional argument: 'size'
+
+> print_square("a")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<string>", line 6, in print_square
+TypeError: size must be an integer
+
+> print_square(-1)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<string>", line 11, in print_square
+ValueError: size must be >= 0
+
+> print_square(float('inf'))
+Traceback (most recent call last):
+... 
+TypeError: 'float' object cannot be interpreted as an integer
+
+> print_square(0)
+
+
+> print_square(5.5)
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+> print_square(-7.5)
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
