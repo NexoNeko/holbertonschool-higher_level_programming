@@ -6,10 +6,10 @@ Tests for ``5-text_indentation.py``
 
 >>> text_indentation = __import__('5-text_indentation').text_indentation
 
->>> text_indentation("""add a new line here, dear. \
-Thank you, lovely. Care for another new line? \
-Oh, how playful, hadn't you just added a new line before? \
-My, my, now this: and this: \
+>>> text_indentation("""add a new line here, dear.\
+Thank you, lovely. Care for another new line?\
+Oh, how playful, hadn't you just added a new line before?\
+My, my, now this: and this:\
 Well done, dear.""")
 add a new line here, dear.
 <BLANKLINE>
