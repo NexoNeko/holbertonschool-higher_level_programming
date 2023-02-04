@@ -1,5 +1,12 @@
-import unittest
+# ==========================
+# Tests for ``6-max_integer.py``
+# ==========================
+
+# --------------------------
 """unittests for 6-max_integer.py"""
+
+import unittest
+max_integer = __import__('6-max_integer').max_integer
 
 class test_max_integer(unittest.TestCase):
     """ Test methods begin here """
@@ -52,3 +59,6 @@ class test_max_integer(unittest.TestCase):
         """ Test for an ordered list """
         list = [11, 12, 13, 14]
         assertEqual(max_integer(list), 14)
+
+if __name__ == '__main__':
+    unittest.main()
