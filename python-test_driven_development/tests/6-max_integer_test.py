@@ -38,7 +38,7 @@ class test_max_integer(unittest.TestCase):
     def test_float_int_infinity(self):
         """ Test for float, int and infinity """
         list = [125.5, 154, 12.5, float('inf')]
-        self.assertEqual(max_integer(list), inf)
+        self.assertEqual(max_integer(list), 'inf')
     
     def test_string_list(self):
         """ Test for a list of strings """
