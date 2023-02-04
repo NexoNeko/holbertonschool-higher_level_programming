@@ -1,0 +1,61 @@
+==========================
+Tests for ``5-text_indentation.py``
+==========================
+
+--------------------------
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+>>> text_indentation("""add a new line here, dear. \
+ Thank you, lovely. Care for another new line? \
+Oh, how playful, hadn't you just added a new line before? \
+My, my, now this: and this: \
+Well done, dear.""")
+add a new line here, dear.
+<BLANKLINE>
+Thank you, lovely.
+<BLANKLINE>
+Care for another new line?
+<BLANKLINE>
+Oh, how playful, hadn't you just added a new line before?
+<BLANKLINE>
+My, my, now this:
+<BLANKLINE>
+and this:
+<BLANKLINE>
+Well done, dear.
+<BLANKLINE>
+
+>>> text_indentation("\'tis be an easy one for you:")
+'tis be an easy one for you:
+<BLANKLINE>
+
+>>> text_indentation(12)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+>>> text_indentation('12')
+12
+
+>>> text_indentation()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+>>> text_indentation("some string", "and another")
+Traceback (most recent call last):
+...
+TypeError: text_indentation() takes 1 positional argument but 2 were given
+
+>>> text_indentation("    a.   b.    c. ")
+a.
+<BLANKLINE>
+b.
+<BLANKLINE>
+c.
+<BLANKLINE>
+
+>>> text_indentation("")
+
+>>> text_indentation("  ")
