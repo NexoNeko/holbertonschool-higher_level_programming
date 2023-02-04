@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 """Defines fun that prints 2 new lines after ., ? or :"""
 
+
 def text_indentation(text):
-"""prints 2 new lines after ., ? or :
+    """prints 2 new lines after ., ? or :
     Removes spaces at begining of new line.
     If text is not string, throws a type error"""
-
     if type(text) is not str:
         raise TypeError("text must be a string")
 
