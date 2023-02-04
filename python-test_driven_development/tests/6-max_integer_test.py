@@ -18,7 +18,7 @@ class test_max_integer(unittest.TestCase):
     
     def test_string(self):
         """ Test for strings """
-        self.assertEqual(max_integer("buttercup"), u)
+        self.assertEqual(max_integer("buttercup"), 'u')
     
     def test_one_element(self):
         """ Tests for an 1 element list"""
@@ -48,7 +48,7 @@ class test_max_integer(unittest.TestCase):
     def test_number_string_first_is_greatest(self):
         """ Test for a list of strings containing numbers """
         list = ['15', '14', '12', '14']
-        self.assertEqual(max_integer(list), 15)
+        self.assertEqual(max_integer(list), '15')
     
     def test_unordered_list(self):
         """ Test for an unordered list """
