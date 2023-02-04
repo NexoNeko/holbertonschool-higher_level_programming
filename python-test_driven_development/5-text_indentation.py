@@ -9,7 +9,7 @@ def text_indentation(text):
     if type(text) is not str:
         raise TypeError("text must be a string")
 
-    spc_flag = 0
+    spc_flag = 1
     la = []
 
     for i in text:
