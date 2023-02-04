@@ -31,8 +31,8 @@ ValueError: size must be >= 0
 
 >>> print_square(float('inf'))
 Traceback (most recent call last):
-... 
-TypeError: 'float' object cannot be interpreted as an integer
+...
+TypeError: size must be an integer
 
 >>> print_square(0)
 
