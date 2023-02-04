@@ -11,7 +11,8 @@ def matrix_divided(matrix, div):
     div = int(div)
     if div == 0:
         raise ZeroDivisionError("division by zero")
-
+    if type(matrix) is not list:
+        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
     for i in range(len(matrix)):
         for j in range(len(matrix[i])):
             # j type error
