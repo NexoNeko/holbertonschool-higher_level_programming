@@ -27,8 +27,7 @@ class Rectangle:
     @height.setter
     def height(self, value):
         if value < 0:
-            raise TypeError("height must be >= 0")
+            raise ValueError("height must be >= 0")
         if type(value) is not int:
-            raise ValueError("height must be an integer")
+            raise TypeError("height must be an integer")
         self.__height = value
-
