@@ -5,7 +5,7 @@
 class Rectangle:
     """A rectangle."""
     number_of_instances = 0
-    
+
     def __init__(self, width=0, height=0):
         Rectangle.number_of_instances += 1
         self.height = height
@@ -38,6 +38,7 @@ class Rectangle:
     def area(self):
         area = self.height * self.width
         return area
+
     def perimeter(self):
         if self.width == 0\
                 or self.height == 0:
@@ -50,7 +51,7 @@ class Rectangle:
             return ""
         for i in range(self.height):
             for j in range(self.width):
-                print("#", end = "")
+                print("#", end="")
             if i != self.height - 1:
                 print("")
         return ""
