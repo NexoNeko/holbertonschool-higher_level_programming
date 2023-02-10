@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """ Defines the Square class, subclass of Rectangle """
-BaseGeometry = __import__('7-base_geometry').BaseGeometry
-""" Imports BaseGeometry class"""
+Rectangle = __import__('9-rectangle').Rectangle
+""" Imports Rectangle class """
 
 
 class Square(Rectangle):
