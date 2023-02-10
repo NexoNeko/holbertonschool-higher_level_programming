@@ -1,0 +1,19 @@
+==========================
+Tests for ``1-my_list.py``
+==========================
+
+--------------------------
+
+>>> MyList = __import__('1-my_list').MyList
+
+>>> my_list = MyList()
+>>> my_list.append('a')
+>>> my_list.append('d')
+>>> my_list.append('c')
+>>> print(my_list)
+>>> my_list.print_sorted()
+>>> print(my_list)
+
+['a', 'd', 'c']
+['a', 'c', 'd']
+['a', 'd', 'c']
