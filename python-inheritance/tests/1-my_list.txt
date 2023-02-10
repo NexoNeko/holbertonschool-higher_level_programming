@@ -16,3 +16,7 @@ Tests for ``1-my_list.py``
 ['a', 'c', 'd']
 >>> print(my_list)
 ['a', 'd', 'c']
+
+>>> my_list = MyList()
+>>> my_list.print_sorted()
+[]
