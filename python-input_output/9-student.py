@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ Defines the class student """
 
+
 class Student:
     """ represents a student """
 
