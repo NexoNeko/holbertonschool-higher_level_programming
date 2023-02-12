@@ -10,6 +10,6 @@ class Student:
         self.last_name = last_name
         self.age = age
 
-        def to_json(self):
-            """ Returns a dict repr of the student obj """
-            return self.__dict__
+    def to_json(self):
+        """ Returns a dict repr of the student obj """
+        return self.__dict__
