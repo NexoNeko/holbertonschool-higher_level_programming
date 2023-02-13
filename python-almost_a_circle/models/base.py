@@ -1,7 +1,10 @@
-#usr/bin/python3
-""" Creates the base class """
+#!usr/bin/python3
+""" Defines the base class """
+
 
 class Base:
+    """ Base instance for future objects
+    Manages IDs. """
     __nb_objects = 0
 
     def __init__(self, id=None):
