@@ -87,10 +87,10 @@ class Rectangle(Base):
     def __str__(self):
         if "Rectangle" in str(type(self)):
             return(f"[{__class__.__name__}] ({self.id}) {self.x}/{self.y}"
-                  f" - {self.width}/{self.height}")
+                   f" - {self.width}/{self.height}")
         else:
             return (f"[Square] ({self.id}) {self.x}/{self.y}"
-                  f" - {self.width}")
+                    f" - {self.width}")
         return ""
 
     def update(self, *args, **kwargs):
@@ -111,7 +111,7 @@ class Rectangle(Base):
         X = {}
         Y = {}
         for k, v in vars(self).items():
-                Y.update({k[12:] : v})
+                Y.update({k[12:]: v})
         Y['id'] = Y['']
         Y.pop('')
         Order = ["x", "y", 'id', "height", "width"]
