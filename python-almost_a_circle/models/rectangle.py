@@ -85,8 +85,12 @@ class Rectangle(Base):
         return ""
 
     def __str__(self):
-        print(f"[Rectangle] ({self.id}) {self.x}/{self.y}"
-              f" - {self.width}/{self.height}", end="")
+        if type(self.__str__) == Rectangle.__str__:
+            print(f"[{__class__.__name__}] ({self.id}) {self.x}/{self.y}"
+                  f" - {self.width}/{self.height}", end="")
+        else:
+            print(f"[Square] ({self.id}) {self.x}/{self.y}"
+                  f" - {self.width}/{self.height}", end="")
         return ""
 
     def update(self, *args, **kwargs):
