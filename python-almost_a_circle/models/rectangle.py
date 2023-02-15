@@ -85,9 +85,9 @@ class Rectangle(Base):
         return ""
 
     def __str__(self):
-        if type(self.__str__) == Rectangle.__str__:
-            print(f"[Rectangle] ({self.id}) {self.x}/{self.y}"
-                  f" - {self.width}/{self.height}", end="")
+        if "Rectangle" in str(type(self)):
+            return(f"[{__class__.__name__}] ({self.id}) {self.x}/{self.y}"
+                  f" - {self.width}/{self.height}")
         else:
             return (f"[Square] ({self.id}) {self.x}/{self.y}"
                   f" - {self.width}")
@@ -104,3 +104,14 @@ class Rectangle(Base):
         elif kwargs:
             for key, value in kwargs.items():
                 setattr(self, key, value)
+
+    def to_dictionary(self):
+        X = {}
+        Y = {}
+        for k, v in vars(self).items():
+                Y.update({k[12:] : v})
+        Y['id'] = Y['']
+        Y.pop('')
+        Order = ["x", "y", 'id', "height", "width"]
+        X = {k: Y[k] for k in Order}
+        return X
