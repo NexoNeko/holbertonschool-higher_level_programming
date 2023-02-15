@@ -69,6 +69,7 @@ class Rectangle(Base):
         return area
 
     def display(self):
+        """ Prints the rectangle with # on the console """
         if self.height == 0 or self.width == 0:
             return ""
         for i in range(self.height):
