@@ -106,6 +106,8 @@ class Rectangle(Base):
                 setattr(self, key, value)
 
     def to_dictionary(self):
+        """ Returns a resumed dictionary reperesentation
+        Of the rectangle class, just variables """
         X = {}
         Y = {}
         for k, v in vars(self).items():
