@@ -72,7 +72,11 @@ class Rectangle(Base):
         """ Prints the rectangle with # on the console """
         if self.height == 0 or self.width == 0:
             return ""
+        for i in range(self.y):
+            print("")
         for i in range(self.height):
+            for n in range(self.x):
+                print(" ", end="")
             for j in range(self.width):
                 print("#", end="")
             if i != self.height - 1:
