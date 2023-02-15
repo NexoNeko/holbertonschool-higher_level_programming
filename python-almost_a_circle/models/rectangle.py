@@ -90,7 +90,7 @@ class Rectangle(Base):
                   f" - {self.width}/{self.height}", end="")
         else:
             print(f"[Square] ({self.id}) {self.x}/{self.y}"
-                  f" - {self.width}/{self.height}", end="")
+                  f" - {self.width}", end="")
         return ""
 
     def update(self, *args, **kwargs):
