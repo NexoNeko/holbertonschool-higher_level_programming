@@ -98,5 +98,5 @@ class Rectangle(Base):
             for i in range(len(args)):
                 exec(f"self.{my_list[i]} = {args[i]}")
         elif kwargs:
-            for i, j in kwargs.items():
-                exec(f"self.{i} = {j}")
+            for key, value in kwargs.items():
+                setattr(self, key, value)
