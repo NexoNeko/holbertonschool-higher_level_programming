@@ -89,10 +89,14 @@ class Rectangle(Base):
               f" - {self.width}/{self.height}", end="")
         return ""
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """ Updates the values contained within rectangle.
         Each value updated depends on the index of args.
         0 = id, 1 = width, 2 = height, 3 = x, 4 = y """
         my_list = ["id", "width", "height", "x", "y"]
-        for i in range(len(args)):
-            exec(f"self.{my_list[i]} = {args[i]}")
+        if args:
+            for i in range(len(args)):
+                exec(f"self.{my_list[i]} = {args[i]}")
+        elif kwargs:
+            for i, j in kwargs.items():
+                exec(f"self.{i} = {j}")
