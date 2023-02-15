@@ -34,3 +34,19 @@ class Square(Rectangle):
         elif kwargs:
             for key, value in kwargs.items():
                 setattr(self, key, value)
+
+    def to_dictionary(self):
+        """ Returns a resumed dictionary reperesentation
+        Of the Square class, just variables """
+        X = {}
+        Y = {}
+        for k, v in vars(self).items():
+            if 'id' in str(k):
+                Y.update({k: v})
+            else:
+                Y.update({k[12:]: v})
+        Y['size'] = Y['']
+        Y.pop('')
+        Order = ["id", "x", 'size', "y"]
+        X = {k: Y[k] for k in Order}
+        return X
