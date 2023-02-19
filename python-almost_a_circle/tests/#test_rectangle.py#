@@ -139,15 +139,16 @@ class test_rectangle(unittest.TestCase):
         self.assertEqual("[Rectangle] (5) 3/4 - 1/2", str(r1))
 
     def test_save_to_file_None(self):
-        with self.assertRaises(TypeError):
+        with self.assertRaisesRegex(AttributeError, " must be >= 0"):
             Rectangle.save_to_file(None)
 
     def test_save_to_file_empty_list(self):
-        with self.assertRaises(TypeError):
-            Rectangle.save_to_file([])
+        Rectangle.save_to_file([])
+        with open("Rectangle.json", "r") as f:
+            self.assertEqual("[]", f.read())
 
     def test_save_to_file_more_than_one_arg(self):
-        with self.assertRaises(AttributeError):
+        with self.assertRaises(TypeError):
             Rectangle.save_to_file([], 2)
 
     @classmethod
@@ -161,6 +162,13 @@ class test_rectangle(unittest.TestCase):
             os.remove("Square.json")
         except IOError:
             pass
+
+    def test_load_from_file_first_rectangle(self):
+        r1 = Rectangle(10, 7, 2, 8, 1)
+        r2 = Rectangle(2, 4, 5, 6, 2)
+        Rectangle.save_to_file([r1, r2])
+        list_rectangles_output = Rectangle.load_from_file()
+        self.assertEqual(str(r1), str(list_rectangles_output[0]))
 
     def test_load_no_file(self):
         output = Rectangle.load_from_file()
