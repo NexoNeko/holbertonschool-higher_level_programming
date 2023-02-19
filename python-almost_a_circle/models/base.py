@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """ Defines the base class """
-
+import json
 
 class Base:
     """ Base instance for future objects
