@@ -1,3 +1,4 @@
+-- Creates second_table in hbtn_0c_0 and adds a few values
 CREATE TABLE IF NOT EXISTS second_table (
        id INT,
        name VARCHAR(256),
