@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 # lists all states from the database hbtn_0e_0_usa
-# Takes [USERNAME][PASSWORD][DATABASE] as parameters
+""" Use: ./[SCRIPTCALL] [USERNAME] [PASSWORD] [DATABASE] """
 import sys
 import MySQLdb
 
