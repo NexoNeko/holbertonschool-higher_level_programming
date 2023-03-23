@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" lists all state from database """
+""" Lists all state from database. """
 
 from sys import argv
 from model_state import State, Base
