@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-let x = Math.floor(Number(process.argv[2]));
+const x = Math.floor(Number(process.argv[2]));
 
 if (isNaN(x)) {
   console.log('Missing number of occurrences');
