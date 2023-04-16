@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
-let phrase = ['C is fun', 'Python is cool', 'Javascript is amazing'];
+const phrase = ['C is fun', 'Python is cool', 'JavaScript is amazing'];
 
-for (let x of phrase) {
+for (const x of phrase) {
   console.log(x);
 }
